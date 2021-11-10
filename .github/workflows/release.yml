@@ -15,6 +15,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 14
+      - name: Detect re-run and delete tags
+        if: ${{ github.run_attempt > 1 }}
+        run: |
+          current_tag=$(git tag --points-at HEAD)
+          echo "Current tag is $current_tag"
+          git tag -d "$current_tag"
+          git push --delete origin "$current_tag"
       - name: Install dependencies
         run: npm ci
       - name: Release
