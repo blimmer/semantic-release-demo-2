@@ -1,0 +1,28 @@
+{
+  "name": "semantic-release-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "mkdir -p dist && echo $1 > dist/asset.txt",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blimmer/semantic-release-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blimmer/semantic-release-demo/issues"
+  },
+  "homepage": "https://github.com/blimmer/semantic-release-demo#readme",
+  "devDependencies": {
+    "@semantic-release/exec": "^5.0.0",
+    "@semantic-release/git": "^9.0.0",
+    "conventional-changelog-conventionalcommits": "^4.5.0",
+    "prettier": "^2.2.1",
+    "semantic-release": "^17.3.7"
+  }
+}
