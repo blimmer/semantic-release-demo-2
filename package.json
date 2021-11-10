@@ -1,5 +1,5 @@
 {
-  "name": "semantic-release-demo",
+  "name": "semantic-release-demo-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blimmer/semantic-release-demo.git"
+    "url": "git+https://github.com/blimmer/semantic-release-demo-2.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/blimmer/semantic-release-demo/issues"
+    "url": "https://github.com/blimmer/semantic-release-demo-2/issues"
   },
-  "homepage": "https://github.com/blimmer/semantic-release-demo#readme",
+  "homepage": "https://github.com/blimmer/semantic-release-demo-2#readme",
   "devDependencies": {
     "@semantic-release/exec": "^6.0.2",
     "@semantic-release/git": "^10.0.1",
