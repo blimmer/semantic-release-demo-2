@@ -15,6 +15,10 @@ module.exports = {
       "@semantic-release/exec",
       {
         prepareCmd: "npm run build -- ${nextRelease.version}",
+
+        // Set a GitHub actions output to indicate the released version
+        successCmd:
+          'echo "::set-output name=release_version::${nextRelease.version}"',
       },
     ],
     [

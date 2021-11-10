@@ -18,6 +18,17 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Release
+        id: semantic_release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+      - name: Ensure RELEASE_VERSION is set
+        env:
+          RELEASE_VERSION: ${{ steps.semantic_release.outputs.release_version }}
+        run: |
+          if [[ -z "$RELEASE_VERSION" ]]; then
+            echo "RELEASE_VERSION was not set!";
+            exit 1;
+          fi
+
+          echo "release version is: $RELEASE_VERSION"
